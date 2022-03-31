@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('products', function(Blueprint $b)
         {
             $b->id();
-            $b->string('titlle', 80);
+            $b->string('title', 80);
             $b->string('category', 50);
-            $b->double('prize');
+            $b->double('price');
             $b->text('description');
             $b->integer('stock');
             $b->boolean('free_shipping');
