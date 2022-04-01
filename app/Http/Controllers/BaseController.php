@@ -6,13 +6,13 @@ use Illuminate\Http\Request;
 
 class BaseController extends Controller
 {
-    public function out($data = null, $status = ' ', $error = null, $code = 200)
+    public function out($data = null, $status = '', $error = null, $code = 200)
     {
-        return \response()->json(
+        return response()->json(
             [
                 'status' => $status,
-                'data' => $data,
-                'error' => $error
+                'data'   => $data,
+                'error'  => $error
             ], $code
         );
     }

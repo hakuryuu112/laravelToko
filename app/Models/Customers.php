@@ -11,6 +11,6 @@ class Customers extends Model
 
     protected $table = 'customers';
     const CREATED_AT = null;
-    const UPDATE_AT = null;
+    const UPDATED_AT = null;
     protected $guarded = [];
 }
