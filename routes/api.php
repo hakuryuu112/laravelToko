@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +23,7 @@ Route::get('/auth', [AuthController::class, 'auth']);
 //Product Conroller
 Route::get('/product', [ProductController::class, 'findAll']);
 Route::get('/product/{product}', [ProductController::class, 'findOne']);
+
+//Order Controller
+Route::post('/orders', [OrderController::class, 'store']);
+Route::get('/orders', [OrderController::class, 'findAll']);
